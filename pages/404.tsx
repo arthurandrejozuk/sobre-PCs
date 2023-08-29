@@ -4,9 +4,13 @@ import Components from "app/pagesPrototype/components";
 export default function Page404(){
     return(
         <Components children={
-            <h1>
+            <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            }}>
                 Pagina não encontrada 404
-            </h1>
+            </div>
         } titulo="404"/>
     )
 }

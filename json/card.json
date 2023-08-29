@@ -18,7 +18,7 @@
         "nome":"Memória RAM",
         "imagem": "https://images.unsplash.com/photo-1611323209377-2ad4968815e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
         "descricao": "Memória RAM (random access memory) é um tipo de memória volátil que trabalha em conjunto com o CPU permitindo maior velocidade e quantidade de dados para o CPU trabalhar.",
-        "endereco": "/ram"
+        "endereco": "/memory"
     },
     {
         "id": 4,
