@@ -6,8 +6,8 @@ import React from 'react';
 const StyledDiv = styled.div`
     margin-right: 120px ;
     margin-left: 120px ;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 60px;
+    margin-bottom: 200px;
     `
 
 
@@ -28,7 +28,7 @@ const StyledButton = styled.div`
     align-items: center;
     button{
         padding: 12px;
-        margin-top: 16px;
+        margin-top: 32px;
         display: flex;
         align-items:center;
         gap: 4px;

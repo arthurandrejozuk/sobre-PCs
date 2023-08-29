@@ -78,7 +78,7 @@ export default function Cabecalho() {
     const [ativa, setAtiva] = useState(false);
 
     return(
-        <StyledHeader>
+        <StyledHeader id="menu">
             <Logo> 
             <h1>
                 PCs & Tecnologia

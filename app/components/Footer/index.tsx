@@ -8,6 +8,7 @@ const StyledFooter = styled.footer`
     justify-content: space-evenly;
     background-color: #0863da;
     border-top: 1px solid;
+    margin-top: 60px;
     h3{
         font-weight: 500;
         color: #023258;

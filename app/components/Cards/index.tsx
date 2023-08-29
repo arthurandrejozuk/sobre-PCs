@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import catalogo from '../../../json/card.json';
+import VoltarButton from '../VoltarButton';
 
 const StyledDiv = styled.div`
     
@@ -76,6 +77,7 @@ const StyledSection = styled.section`
 `
 export default function Cards () {
     return(
+        <>
         <StyledSection>
             {catalogo.map(item => {
                 return(
@@ -99,6 +101,8 @@ export default function Cards () {
                     </StyledDiv>
                 )
             })} 
+            <VoltarButton/>
         </StyledSection>
+        </>
     )
 }

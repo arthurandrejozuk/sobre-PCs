@@ -11,7 +11,7 @@ const StyledBanner = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin-bottom: 40px;
     h2{
         color: antiquewhite;
         text-shadow: 1px 2px 2px black;
