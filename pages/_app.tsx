@@ -2,6 +2,8 @@ import type { AppProps } from 'next/app';
 import React, { useEffect, useState } from 'react';
 import GlobalStyles from 'themes/GlobalStyles';
 import Loading from './loading';
+import Head from 'next/head';
+import { Html } from 'next/document';
  
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -32,6 +34,24 @@ export default function App({ Component, pageProps }: AppProps) {
         <Loading/>
       ) : (
        <>
+            <Head>
+                <title>PCs-Tecnologia</title>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDG4605RYY"></script>
+                <script 
+                    dangerouslySetInnerHTML={{
+                        __html: 
+                        `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+        
+                            gtag('config', 'G-HDG4605RYY');
+                        `
+                    }}
+                />
+                 
+               
+            </Head>
             <GlobalStyles/> 
             <Component {...pageProps} /> 
        </>

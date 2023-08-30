@@ -13,9 +13,9 @@ export default function Loading() {
     return(
         <>
         <GlobalStyles/>
-        <StyledLoading>
-            <h1>Carregando...</h1>
-        </StyledLoading>
+        
+        <h1>Carregando...</h1>
+       
         </>
     )
 }
