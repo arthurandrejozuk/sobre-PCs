@@ -12,9 +12,8 @@ const StyledLoading = styled.div`
 export default function Loading() {
     return(
         <>
-        <GlobalStyles/>
-        
-        <h1>Carregando...</h1>
+    
+            <h1>Carregando...</h1>
        
         </>
     )

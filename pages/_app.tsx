@@ -3,11 +3,19 @@ import React, { useEffect, useState } from 'react';
 import GlobalStyles from 'themes/GlobalStyles';
 import Loading from './loading';
 import Head from 'next/head';
-import { Html } from 'next/document';
- 
+import { ThemeProvider } from 'styled-components';
+import {darkTheme, lightTheme} from '../themes/theme';
+import BotaoTheme from 'app/components/BotaoTheme';
+
+
 export default function App({ Component, pageProps }: AppProps) {
 
-  
+    const [theme, setTheme] = useState('light')
+
+    const themeToggle = () => {
+        theme === "light" ? setTheme("dark") : setTheme("light")
+    }
+
     const [isLoading, setIsLoading] = useState(true);
       
     useEffect(() => {
@@ -29,7 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
       }, []);
 
   return (
-    <div>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         {isLoading ? (
         <Loading/>
       ) : (
@@ -50,12 +58,12 @@ export default function App({ Component, pageProps }: AppProps) {
                     }}
                 />
                  
-               
             </Head>
             <GlobalStyles/> 
+            <BotaoTheme onClick={() => {themeToggle()}}/>
             <Component {...pageProps} /> 
        </>
       )}
-    </div>
+    </ThemeProvider>
   )
-}
+} 

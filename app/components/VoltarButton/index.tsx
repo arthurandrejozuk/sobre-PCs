@@ -7,11 +7,15 @@ const Arrow = styled.div`
     border-radius: 100%;
     border: 1px solid #805804;
     display: flex;
-    width: 18px;
     display: flex;
-    justify-content: end;
-    align-items: end;
-
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin-top: 16px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
 `
 
 export default function VoltarButton() {

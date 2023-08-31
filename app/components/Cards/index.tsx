@@ -4,7 +4,7 @@ import VoltarButton from '../VoltarButton';
 
 const StyledDiv = styled.div`
     
-    
+  
     display: flex;
     align-items: center;
     margin-left: 100px;
@@ -58,10 +58,14 @@ const StyledDivDesc = styled.div`
     button:hover{
         cursor: pointer;
     }
-    p{
+   a{
         display:inline-block;
-        margin-top: 8px ;
-        color: aliceblue;
+        color: black;
+    }
+    p{
+        margin-top: 12px;
+        color:  ${props => props.theme.fontColor};
+        font-weight: 600;
     }
 
     h1{

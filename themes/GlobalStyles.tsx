@@ -15,9 +15,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'REM', sans-serif;
     display: flex;
     flex: 1;
-    background-color: #ecf6ff;
     flex-direction: column;
-   
+    background-color: ${props => props.theme.body};
   }
   #__next {
     width: 100%;
@@ -30,14 +29,7 @@ const GlobalStyles = createGlobalStyle`
     align-content: flex-start;
     flex-shrink: 0;
   }
-  // ============
-  // [Dark Mode Styles]
-  /* body.dark {
-    color: #FFFFFF; 
-    background-color: #111111;
-  } */
-  // ============
-  // [Reset Styles]
+ 
   * {
  
     box-sizing: border-box;

@@ -8,6 +8,12 @@ const StyledDiv = styled.div`
     margin-left: 120px ;
     margin-top: 60px;
     margin-bottom: 200px;
+    h1{   
+        color: ${props => props.theme.fontColor};
+    }
+    p{
+        color: ${props => props.theme.fontColor};
+    }
     `
 
 
@@ -42,6 +48,8 @@ const StyledButton = styled.div`
     a{
         text-decoration: none;
     }
+
+   
     
     `
 interface InformacaoProps {

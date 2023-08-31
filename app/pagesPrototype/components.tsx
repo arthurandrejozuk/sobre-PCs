@@ -1,4 +1,5 @@
 import Banner from "app/components/Banner";
+import BotaoTheme from "app/components/BotaoTheme";
 import Cabecalho from "app/components/Cabecalho";
 import Footer from "app/components/Footer";
 
