@@ -1,29 +1,27 @@
-import {AiOutlineArrowUp} from 'react-icons/ai';
-import styled from 'styled-components';
+import { BiArrowBack } from "react-icons/bi";
+import styled from "styled-components";
 
-const Arrow = styled.div`
-    
-    background-color: #db9b11;
-    border-radius: 100%;
-    border: 1px solid #805804;
-    display: flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    margin-top: 16px;
-    a{
-        text-decoration: none;
-        color: black;
-    }
+const StyledButton = styled.button`
+
+        margin-top:12px ;
+        padding: 12px;
+        max-width: 100px;
+        justify-content: center;
+        display: flex;
+        align-items:center;
+        gap: 4px;
+        background-color: #ffa600;
+        border-radius: 12px;
+        border: 1px solid;
 `
 
-export default function VoltarButton() {
-
-
+export default function VoltarButton(){
     return(
-       <Arrow>
-           <a href='#menu'><AiOutlineArrowUp/></a>
-       </Arrow>
+        <>
+            <StyledButton>
+                <BiArrowBack/>
+                 Voltar
+            </StyledButton>
+        </>
     )
 }

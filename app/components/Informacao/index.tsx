@@ -1,19 +1,26 @@
 import styled from 'styled-components';
 import {BiArrowBack} from 'react-icons/bi'
 import React from 'react';
+import VoltarButton from '../VoltarButton';
 
 
 const StyledDiv = styled.div`
-    margin-right: 120px ;
-    margin-left: 120px ;
-    margin-top: 60px;
-    margin-bottom: 200px;
+    margin-right: 300px ;
+    margin-left: 300px ;
+    
+    
     h1{   
         color: ${props => props.theme.fontColor};
     }
     p{
         color: ${props => props.theme.fontColor};
     }
+    
+    @media (max-width:1350px){
+        margin-right: 100px ;
+        margin-left: 100px ;
+    }
+
     `
 
 
@@ -27,30 +34,15 @@ const StyledImg = styled.img`
     }
     `
 
-const StyledButton = styled.div`
+const StyledButton = styled.a`
     
     display: flex;
     justify-content: center;
     align-items: center;
-    button{
-        padding: 12px;
-        margin-top: 32px;
-        display: flex;
-        align-items:center;
-        gap: 4px;
-        background-color: #ffa600;
-        border-radius: 12px;
-        border: 1px solid;
-    }
-    button:hover{
+    text-decoration: none;
+    :hover{
         cursor: pointer;
     }
-    a{
-        text-decoration: none;
-    }
-
-   
-    
     `
 interface InformacaoProps {
    descricao: string
@@ -61,25 +53,22 @@ interface InformacaoProps {
 export default function Informacao({descricao, titulo, imagem}:InformacaoProps){
     
     return(
-        <StyledDiv>
-            <div>
-                <StyledImg src={imagem} alt={titulo} />
-            </div>
-            
-                <h1>{titulo}</h1>
-                <p>
-                   {descricao}
-                </p>
-    
-           <StyledButton>
-            <a href='/'>
-                <button>
-                    <BiArrowBack/>
-                    Voltar
-                </button>
-            </a>
-           </StyledButton>
-        </StyledDiv>
+        <>
+            <StyledDiv>
+                <div>
+                    <StyledImg src={imagem} alt={titulo} />
+                </div>
+                
+                    <h1>{titulo}</h1>
+                    <p>
+                    {descricao}
+                    </p>
+          
+            </StyledDiv>
+            <StyledButton href='/'>
+                <VoltarButton/>
+            </StyledButton>
+        </>
        
     )
 }

@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans&family=Oswald:wght@300;500;600;700&family=REM:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans&family=Oswald:wght@300;500;600;700&family=montserrat:wght@300;400;500;600;700&display=swap');
 
   html {
     display: flex;

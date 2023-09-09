@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import catalogo from '../../../json/card.json';
-import VoltarButton from '../VoltarButton';
+import TopButton from '../TopButton';
 
 const StyledDiv = styled.div`
     
@@ -105,7 +105,7 @@ export default function Cards () {
                     </StyledDiv>
                 )
             })} 
-            <VoltarButton/>
+            <TopButton/>
         </StyledSection>
         </>
     )
