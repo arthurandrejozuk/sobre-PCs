@@ -10,9 +10,6 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'REM', sans-serif;
     display: flex;
     flex: 1;
     flex-direction: column;
