@@ -1,5 +1,5 @@
 import Informacao from 'app/components/Informacao';
-import Components from 'app/pagesPrototype/components';
+import Components from 'app/components/pagesPrototype/components';
 
 
 export default function SobreInfo() {

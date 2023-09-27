@@ -1,5 +1,4 @@
-import Components from "app/pagesPrototype/components";
-
+import Components from "app/components/pagesPrototype/components";
 
 export default function Page404(){
     return(

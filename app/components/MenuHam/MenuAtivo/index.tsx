@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import pecas from "../../../../json/card.json";
+import pecas from "../../../../public/json/card.json";
 
 const StyledMenu = styled.div`
 

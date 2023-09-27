@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import catalogo from '../../../json/card.json';
+import catalogo from '../../../public/json/card.json';
 import TopButton from '../TopButton';
 
 const StyledDiv = styled.div`

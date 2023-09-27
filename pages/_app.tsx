@@ -24,7 +24,6 @@ export default function App({ Component, pageProps }: AppProps) {
         if (storedIsLoading === 'false') {
           setIsLoading(false);
         } else {
-          // Simule um carregamento demorado (por exemplo, com setTimeout)
           const loadingTimeout = setTimeout(() => {
             setIsLoading(false);
             localStorage.setItem('isLoading', 'false');
