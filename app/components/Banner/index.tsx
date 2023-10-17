@@ -5,7 +5,7 @@ const StyledBanner = styled.div`
 
     z-index: 1;
     background-size:cover;
-    height: 320px;
+    height: 400px;
     opacity: 0.9;
     border-top: 1px solid rgb(29, 145, 240) ;
     display: flex;
