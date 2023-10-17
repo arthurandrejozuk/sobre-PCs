@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
     border-radius: 4px;
     gap: 16px;
     margin-right: 100px;
-    background-color: #265df5;
+    background-color: rgb(38, 93, 245, 0.9);
     margin-top: 16px;
     margin-bottom: 16px;
     width: 700px;

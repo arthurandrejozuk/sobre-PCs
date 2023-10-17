@@ -12,7 +12,7 @@ const StyledMenu = styled.div`
      list-style-type: none;
      display: flex;
      flex-direction: column;
-     gap: 12px;
+     gap: 32px;
      align-items: start;
      margin: 32px ;
      width: 100%;
