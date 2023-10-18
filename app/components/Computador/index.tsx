@@ -68,6 +68,38 @@ const StyledCompu = styled.div`
     .placa_video{
         top: 64px;
     }
+    @media (max-width: 700px){
+        img{
+            border-radius:0%;
+        }
+        span{
+        opacity: 0.2;
+        transition: 250ms;
+    }
+        .processador{
+        top: 100px;
+        left: 120px; 
+    }
+    .memoria{
+        top: 100px;
+        left: 200px;
+    }
+    .cooler{
+        bottom: 200px;
+        right: 128px;
+    }
+    .ssd{
+        top: 8px;
+        left: 112px;
+    }
+    .placa_mae{
+        bottom: 200px;
+        left: 290px;
+    }
+    .placa_video{
+        top: 64px;
+    }
+    }
 `
 
 

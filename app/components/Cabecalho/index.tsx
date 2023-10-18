@@ -37,7 +37,8 @@ const Opcoes = styled.a`
 
     color: rgb(29, 145, 240) ;
     text-decoration: none;
-    font-size: 32px;
+    font-size: 36px;
+    text-align: center;
   
     @media (min-width: 700px){
         display: none;

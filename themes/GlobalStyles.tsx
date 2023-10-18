@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
     flex-direction: column;
   }
   body {
+    width: fit-content;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex: 1;

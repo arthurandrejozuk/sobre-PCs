@@ -3,8 +3,7 @@ import catalogo from '../../../public/json/card.json';
 import TopButton from '../TopButton';
 
 const StyledDiv = styled.div`
-    
-  
+
     display: flex;
     align-items: center;
     margin-left: 100px;
@@ -24,7 +23,7 @@ const StyledDiv = styled.div`
     
     @media( max-width: 700px) {
         flex-wrap: wrap;
-        max-width: 300px;
+        max-width: 400px;
         padding-right:0;
         img{
             width: 100%;    
@@ -50,17 +49,18 @@ const StyledDivDesc = styled.div`
         margin: 12px;
     }
     button{
-        background-color: rgb(255, 165, 0);
+        background-color: rgb(38, 93, 245, 0.9);
         padding: 12px ;
-        border-radius: 12px;
-        border: 2px solid rgb(110, 72, 1);
+        border: 0;
+        border-bottom: 1px solid antiquewhite;
+        font-weight: 600;
     }
     button:hover{
         cursor: pointer;
     }
    a{
         display:inline-block;
-        color: black;
+        color:${props => props.theme.fontColor};
     }
     p{
         margin-top: 12px;
