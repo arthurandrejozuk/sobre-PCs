@@ -9,8 +9,7 @@ const Hstyled = styled.div`
     color:  ${props => props.theme.fontColor};
 
 `
-const StyledCompu = styled.div`
-    
+const StyledCompu = styled.div`    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,42 +17,41 @@ const StyledCompu = styled.div`
     img{
         border-radius: 12px;
     }
-
     ul{
         position: absolute;
     }
-
-    li{
-        
+    li{       
         position: relative;
         font-weight: 600;
         color: #00ade2;
-        font-size: 22px;
-        
+        font-size: 22px;        
     }
-
     a{
-       
         text-decoration: none;
         color: #7da7d1;
         text-shadow: 1px 1px 2px #020405;
         display: flex;
         opacity: 0.6;
     } 
-
     a:hover{
        opacity: 1;
        cursor: pointer;
+    }  
+    span{
+        opacity: 0.0;
+        transition: 250ms;
     }
-    
-    
+    span:hover{
+        opacity: 0.8;     
+        cursor: pointer;
+    }
     .processador{
-        bottom: 12px;
-        left: 100px; 
+        top: 24px;
+        left: 136px; 
     }
     .memoria{
-        top: 12px;
-        left: 200px;
+        top: 24px;
+        left: 240px;
     }
     .cooler{
         bottom: 200px;
@@ -61,7 +59,7 @@ const StyledCompu = styled.div`
     }
     .ssd{
         top: 24px;
-        left: 100px;
+        left: 132px;
     }
     .placa_mae{
         bottom: 200px;
@@ -75,9 +73,6 @@ const StyledCompu = styled.div`
 
 export default function Computador(){
 
-    const pecas = ['Processador', 'Memoria Ram', 'Cooler', 'SSD', 'Placa Mãe', 'Placa de Video']
-
-
     return(
         <>
             <Hstyled>
@@ -89,23 +84,27 @@ export default function Computador(){
 
                     <StyledCompu>    
                         <ul>
-                            <li >
-                                <a  className='processador'>Processador</a>
+                            <li className='processador'>
+                                <a>Processador</a>
+                                <span>Ryzen 9 5900X</span>
                             </li>
                             <li  className='memoria'>
-                                <a >Memoria Ram</a>
+                                <a>Memoria Ram</a>
+                                <span>hyperX DDR4 2666MHz</span>
                             </li >
                             <li  className='cooler'>
-                               <a >Cooler</a> 
+                               <a>Cooler</a> 
                             </li >
                             <li  className='ssd'>
-                                <a >SSD</a>
+                                <a>SSD</a>
                             </li >
                             <li  className='placa_mae'>
-                                <a >Placa Mãe</a>
+                                <a>Placa Mãe</a>
+                                <span>B550m-plus</span>
                             </li >
                             <li  className='placa_video'>
-                                <a >Placa de Video</a>
+                                <a>Placa de Video</a>
+                                <span>RTX 2060 SUPER</span>
                             </li >
                         </ul>
                         <img width={750} src={compu.imagem}  alt={compu.nome} />
