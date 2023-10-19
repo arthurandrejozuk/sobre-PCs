@@ -6,8 +6,8 @@ export default function HomeScreen(){
     return(
         <>
             <Components titulo="Home">
-                <Cards/>
                 <Computador/>
+                <Cards/>
             </Components>
         </>
     )
