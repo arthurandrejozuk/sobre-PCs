@@ -17,7 +17,8 @@ export default function App({ Component, pageProps }: AppProps) {
     }
 
     const [isLoading, setIsLoading] = useState(true);
-      
+    const [carregado, setCarregado] = useState(false);
+ 
     useEffect(() => {
         const storedIsLoading = localStorage.getItem('isLoading');
     
@@ -28,7 +29,12 @@ export default function App({ Component, pageProps }: AppProps) {
             setIsLoading(false);
             localStorage.setItem('isLoading', 'false');
           }, 2000);
-    
+          
+          window.onload = () => {
+            // Tudo na página está carregado
+            setCarregado(true);
+          };
+
           return () => {
             clearTimeout(loadingTimeout);
           };

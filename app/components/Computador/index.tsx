@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import computador from '../../../public/json/compu.json';
+import Image from 'next/image';
 
 const Hstyled = styled.div`
     display: flex;
@@ -139,7 +140,7 @@ export default function Computador(){
                                 <span>RTX 2060 SUPER</span>
                             </li >
                         </ul>
-                        <img width={750} src={compu.imagem}  alt={compu.nome} />
+                        <img width={750}  src={compu.imagem}  alt={compu.nome} />
                     </StyledCompu>
                 )
             })}

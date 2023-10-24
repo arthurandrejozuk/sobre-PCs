@@ -18,8 +18,14 @@ const StyledMenu = styled.div`
      width: 100%;
      height: 100%;
     }
+    h1{
+        font-weight: 500;
+        color: antiquewhite;
+        
+    }
     h2{
         color: antiquewhite;
+        margin-bottom:12px;
     }
     a{
         text-decoration: none;
@@ -39,6 +45,7 @@ export default function MenuAtivo() {
     return(
         <StyledMenu>
             <h2>Menu</h2>
+            <h1>Computador</h1>
             <ul>
                {pecas.map((item) => {
                 return(

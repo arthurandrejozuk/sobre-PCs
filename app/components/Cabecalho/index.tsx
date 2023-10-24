@@ -27,9 +27,9 @@ const StyledHeader = styled.header`
     }
     
     @media (max-width: 700px){
-        h1{
+        /* h1{
             display: none;
-        }
+        } */
     }
     `;
 

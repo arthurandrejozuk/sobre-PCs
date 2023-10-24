@@ -43,8 +43,9 @@ const StyledDivDesc = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: 12px;
     
-    div{
+    section{
         align-self: end;
         margin: 12px;
     }
@@ -61,15 +62,36 @@ const StyledDivDesc = styled.div`
    a{
         display:inline-block;
         color:${props => props.theme.fontColor};
+        transition: 0.1s;
     }
-    p{
-        margin-top: 12px;
+    a:hover{
+        color: aliceblue;
+    }
+    p, .nomeComp{
         color:  ${props => props.theme.fontColor};
         font-weight: 600;
+        font-size: 18px;
     }
-
+    div{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        gap: 8px;
+    }
+    div:hover{
+        cursor: auto;
+        .nomeComp{
+            color:  ${props => props.theme.fontColor};
+        }
+    }
     h1{
+        font-size: 28px;
         color: antiquewhite;
+    }
+    .nomeComp{
+        color: rgb(38, 93, 245, 0);
+        transition: 200ms;
+        
     }
 `
 
@@ -88,19 +110,24 @@ export default function Cards () {
                     <StyledDiv key={item.id}>
                         <img src={item.imagem} alt={item.nome} />
                         <StyledDivDesc>
-                            <h1>
-                                {item.nome} 
-                            </h1>
+                            <div className='nome_desc'>
+                                <h1>
+                                    {item.nome} 
+                                </h1>
+                                <p className='nomeComp'>
+                                   - {item.nomeComp}
+                                </p>
+                            </div>
                             <p>
                                 {item.descricao}
                             </p>
-                            <div>
+                            <section>
                                 <button>
                                     <a style={{textDecoration:"none"}} href={item.endereco}>
                                         Ver mais 
                                     </a>   
                                 </button>
-                            </div>
+                            </section>
                         </StyledDivDesc>
                     </StyledDiv>
                 )

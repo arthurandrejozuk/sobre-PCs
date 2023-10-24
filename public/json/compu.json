@@ -2,6 +2,6 @@
     {
         "id":"1",
         "nome":"Computador",
-        "imagem": "images/computador.jpg"
+        "imagem": "/images/computador.jpg"
     }
 ]
