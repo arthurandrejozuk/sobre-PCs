@@ -25,12 +25,7 @@ const StyledHeader = styled.header`
         color: antiquewhite;
         cursor: pointer;
     }
-    
-    @media (max-width: 700px){
-        /* h1{
-            display: none;
-        } */
-    }
+
     `;
 
 const Opcoes = styled.a`
