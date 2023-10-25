@@ -5,7 +5,7 @@ import { useState } from "react";
 import MenuHam from "../MenuHam";
 import {AiOutlineCloseCircle as Fecha, AiTwotoneHome} from 'react-icons/ai';
 import { FcAbout } from 'react-icons/fc';
-
+import Link from 'next/link'
 
 const StyledHeader = styled.header`
     
@@ -25,36 +25,34 @@ const StyledHeader = styled.header`
         color: antiquewhite;
         cursor: pointer;
     }
-    
-    @media (max-width: 700px){
-        /* h1{
-            display: none;
-        } */
-    }
+   
     `;
-
-const Opcoes = styled.a`
-
-    color: rgb(29, 145, 240) ;
-    text-decoration: none;
-    font-size: 36px;
-    text-align: center;
-  
-    @media (min-width: 700px){
-        display: none;
-    }
-    `
-
 
 const OpcoesPc = styled.a`
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
     color: rgb(29, 145, 240) ;
     text-decoration: none;
     font-size: 24px; 
     transition: 500ms;
-    
+    a{
+        flex-direction: column;
+        color: rgb(29, 145, 240) ;
+        text-decoration: none;
+        font-size: 36px;
+        text-align: center;
+    }
+    h2{
+        font-weight: 500;
+        font-size: 28px;
+    }
     @media (max-width: 700px){
-        display: none;    
+       h2{
+        display: none;
+       }   
   
     }
     `
@@ -69,7 +67,10 @@ const StyledItems = styled.div`
     text-align: center;
     a:hover{
         color: rgb(230, 245, 255);
-        font-size: 35;
+        font-size: 36;
+    }
+    .link{
+        text-decoration: none;
     }
 `
 
@@ -84,23 +85,20 @@ export default function Cabecalho() {
             <h1>
                 PCs & Tecnologia
             </h1>
-            
             </Logo>
             <StyledItems>
-                <StyledItems>
-                    <Opcoes href="/">
-                        <AiTwotoneHome />                    
-                    </Opcoes>
-                    <Opcoes href="/sobre">
-                        <FcAbout />
-                    </Opcoes>
-                </StyledItems>
-                <OpcoesPc href="/">
-                    Início
-                </OpcoesPc>
-                <OpcoesPc href="/sobre">
-                    Sobre
-                </OpcoesPc>
+                <Link className="link" href="/">
+                    <OpcoesPc>
+                        <AiTwotoneHome size={36}/>                    
+                        <h2>Home</h2>
+                    </OpcoesPc>
+                </Link>
+                <Link className="link" href="/sobre">
+                    <OpcoesPc>
+                        <FcAbout size={36}/>
+                        <h2>Sobre</h2>
+                    </OpcoesPc>
+                </Link>
             </StyledItems>
             <section>
                 <GiHamburgerMenu  onClick={() => !ativa ? setAtiva(true): setAtiva(false)} className="menu-hamburguer"/>

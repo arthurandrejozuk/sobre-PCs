@@ -15,7 +15,7 @@ const StyledBanner = styled.div`
     h2{
         color: antiquewhite;
         text-shadow: 1px 2px 2px black;
-        font-size: 32px;
+        font-size: 42px;
     }
     
 `
