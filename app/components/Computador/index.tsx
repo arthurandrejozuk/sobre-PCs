@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import computador from '../../../public/json/compu.json';
-import Image from 'next/image';
+import computador from '../../../public/json/tec.json';
 
 const Hstyled = styled.div`
     display: flex;
@@ -26,13 +25,13 @@ const StyledCompu = styled.div`
         font-weight: 600;
         color: #00ade2;
         font-size: 22px;        
+        width: max-content;
     }
     a{
         text-decoration: none;
         color: #7da7d1;
         text-shadow: 1px 1px 2px #020405;
         display: flex;
-        opacity: 0.6;
     } 
     a:hover{
        opacity: 1;
@@ -42,10 +41,11 @@ const StyledCompu = styled.div`
         opacity: 0.0;
         transition: 250ms;
     }
-    span:hover{
-        opacity: 0.8;     
-        cursor: pointer;
-    }
+    li:hover{
+      .span{
+        opacity: 1;
+      }
+    } 
     .processador{
         top: 24px;
         left: 136px; 
@@ -119,26 +119,26 @@ export default function Computador(){
                         <ul>
                             <li className='processador'>
                                 <a>Processador</a>
-                                <span>Ryzen 9 5900X</span>
-                            </li>
+                                <span className='span'>Ryzen 9 5900X</span>
+                            </li >
                             <li  className='memoria'>
                                 <a>Memoria Ram</a>
-                                <span>hyperX DDR4 2666MHz</span>
-                            </li >
+                                <span className='span'>hyperX DDR4 2666MHz</span>
+                            </li>
                             <li  className='cooler'>
                                <a>Cooler</a> 
-                            </li >
+                            </li>
                             <li  className='ssd'>
                                 <a>SSD</a>
-                            </li >
+                            </li>
                             <li  className='placa_mae'>
                                 <a>Placa Mãe</a>
-                                <span>B550m-plus</span>
-                            </li >
+                                <span className='span'>B550m-plus</span>
+                            </li>
                             <li  className='placa_video'>
                                 <a>Placa de Video</a>
-                                <span>RTX 2060 SUPER</span>
-                            </li >
+                                <span className='span'>RTX 2060 SUPER</span>
+                            </li>
                         </ul>
                         <img width={750}  src={compu.imagem}  alt={compu.nome} />
                     </StyledCompu>

@@ -2,9 +2,9 @@ import {AiOutlineArrowUp} from 'react-icons/ai';
 import styled from 'styled-components';
 
 const Arrow = styled.div`
-    background-color: #db9b11;
+    background-color: antiquewhite;
     border-radius: 100%;
-    border: 1px solid #805804;
+    border: 1px solid ${props => props.theme.fontColor};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ const Arrow = styled.div`
     margin-top: 16px;
     a{
         text-decoration: none;
-        color: black;
+        color:#002244
     }
 `
 

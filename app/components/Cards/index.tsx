@@ -61,7 +61,7 @@ const StyledDivDesc = styled.div`
     }
    a{
         display:inline-block;
-        color:${props => props.theme.fontColor};
+        color: antiquewhite;
         transition: 0.1s;
     }
     a:hover{
