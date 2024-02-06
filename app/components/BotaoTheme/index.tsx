@@ -1,19 +1,18 @@
 import styled from "styled-components";
-import React from 'react';
+import React, { useState } from 'react';
 import {MdDarkMode} from 'react-icons/md';
 import {BsFillSunFill} from 'react-icons/bs'
 
 const BotaoStyled = styled.div`
     
- 
+    z-index: 2;
     position: fixed;
     right: 80px;
     text-align: center;
     bottom: 120px;
-    padding: 10px;
+    color: antiquewhite;
     border-radius:100%;
-    border: 1px solid wheat;
-    background-color: #265df5;
+    background-color: transparent;
     :hover{
         cursor: pointer;
     }
@@ -23,11 +22,22 @@ const BotaoStyled = styled.div`
 
 export default function BotaoTheme({onClick}) {
 
-  return(
-   
-        <BotaoStyled onClick={onClick}>
-           <MdDarkMode size={24}/>
-        </BotaoStyled>
+  const [theme, setTheme] = useState(true)
+
+
+  if(theme){
+    return(
     
-  )
+          <BotaoStyled onClick={onClick}>
+             <MdDarkMode onClick={()=>{setTheme(!theme)}} size={32}/>
+          </BotaoStyled>
+      
+    )
+  } else {
+    return(
+      <BotaoStyled onClick={onClick}>
+        <BsFillSunFill onClick={()=>{setTheme(!theme)}} size={32}/>
+      </BotaoStyled>
+    )
+  }
 }

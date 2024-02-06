@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import Logo from "../Logo";
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { PiComputerTowerFill } from "react-icons/pi";
 import { useState } from "react";
 import MenuHam from "../MenuHam";
 import {AiOutlineCloseCircle as Fecha, AiTwotoneHome} from 'react-icons/ai';
-import { FcAbout } from 'react-icons/fc';
 import Link from 'next/link'
+import { MdMore } from "react-icons/md";
 
 const StyledHeader = styled.header`
-    
+
     width: 100%;
     background-color: #012657;
     display: flex;
@@ -18,6 +19,7 @@ const StyledHeader = styled.header`
     
     .menu-hamburguer{
         font-size: 40px;
+        margin-right: 8px;
         transition: 400ms;
         color: rgb(29, 145, 240);
     }
@@ -25,11 +27,6 @@ const StyledHeader = styled.header`
         color: antiquewhite;
         cursor: pointer;
     }
-<<<<<<< HEAD
-
-=======
-   
->>>>>>> secondary
     `;
 
 const OpcoesPc = styled.a`
@@ -38,7 +35,7 @@ const OpcoesPc = styled.a`
     justify-content: center;
     align-items: center;
     gap: 12px;
-    color: rgb(29, 145, 240) ;
+    color: rgb(29, 145, 240);
     text-decoration: none;
     font-size: 24px; 
     transition: 500ms;
@@ -53,7 +50,8 @@ const OpcoesPc = styled.a`
         font-weight: 500;
         font-size: 28px;
     }
-    @media (max-width: 700px){
+    @media (max-width: 1000px){
+        display: none;
        h2{
         display: none;
        }   
@@ -79,7 +77,7 @@ const StyledItems = styled.div`
 `
 
 
-export default function Cabecalho() {
+export default function Cabecalho({action}) {
     
     const [ativa, setAtiva] = useState(false);
 
@@ -92,14 +90,20 @@ export default function Cabecalho() {
             </Logo>
             <StyledItems>
                 <Link className="link" href="/">
-                    <OpcoesPc>
+                    <OpcoesPc  >
                         <AiTwotoneHome size={36}/>                    
                         <h2>Home</h2>
                     </OpcoesPc>
                 </Link>
+                <Link className="link" href="/componentes">
+                    <OpcoesPc onClick={action}>
+                        <PiComputerTowerFill size={36}/>                    
+                        <h2>Componentes</h2>
+                    </OpcoesPc>
+                </Link>
                 <Link className="link" href="/sobre">
                     <OpcoesPc>
-                        <FcAbout size={36}/>
+                        <MdMore size={36}/>
                         <h2>Sobre</h2>
                     </OpcoesPc>
                 </Link>

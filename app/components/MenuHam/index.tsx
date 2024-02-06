@@ -17,6 +17,7 @@ const StyledMenuHam = styled.div`
     padding-top: 12px;
     border-left: 2px solid #1d5596;
     transition: 500ms;
+    width: 300px;
 
     span{
         display: inline-block;
@@ -32,10 +33,6 @@ const StyledMenuHam = styled.div`
         color: antiquewhite;
     }
 
-
-    @media (max-width: 700px) {
-        width: 50%
-    }
 `
 
 

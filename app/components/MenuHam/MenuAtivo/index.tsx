@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import pecas from "../../../../public/json/card.json";
+import { AiTwotoneHome } from "react-icons/ai";
+import { PiComputerTowerFill } from "react-icons/pi";
+import { MdMore } from "react-icons/md";
 
 const StyledMenu = styled.div`
 
@@ -31,9 +34,12 @@ const StyledMenu = styled.div`
         text-decoration: none;
         color: rgb(29, 145, 240);
         font-size: 24px;
+        display: flex;
+        gap: 8px;
     }
     a:hover{
         color:antiquewhite;
+        cursor: pointer;
     }
     z-index: 0;
    
@@ -45,8 +51,11 @@ export default function MenuAtivo() {
     return(
         <StyledMenu>
             <h2>Menu</h2>
-            <h1>Computador</h1>
             <ul>
+            <a href="/"><AiTwotoneHome/><li>Home</li></a>
+            <a href="/componentes"><PiComputerTowerFill/><li>Componentes</li></a>
+            <a href="/sobre"><MdMore/><li>Sobre</li></a>
+            <h1>Componentes:</h1>
                {pecas.map((item) => {
                 return(
                     <li>
@@ -56,6 +65,7 @@ export default function MenuAtivo() {
                     </li>
                 )
                })}
+               
             </ul>
         </StyledMenu>
     )

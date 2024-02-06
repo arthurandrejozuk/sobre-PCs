@@ -23,14 +23,20 @@ const StyledBanner = styled.div`
 interface BannerProps {
     children: React.ReactNode;
     banner: string;
+    desativa?: boolean
 }
 
-export default function Banner({children, banner}: BannerProps ) {
-    return(
-        <StyledBanner style={{backgroundImage:`${banner}`}}>  
-        <h2>
-            {children}
-        </h2>
-        </StyledBanner>
-    )
+export default function Banner({children, banner, desativa}: BannerProps ) {
+    if(desativa){
+        return(
+            <StyledBanner style={{backgroundImage:`${banner}`}}>  
+            <h2>
+                {children}
+            </h2>
+            </StyledBanner>
+        )
+    } else {
+        return (<></>)
+    }
+    
 }

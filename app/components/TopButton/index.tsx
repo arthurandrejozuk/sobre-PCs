@@ -2,9 +2,9 @@ import {AiOutlineArrowUp} from 'react-icons/ai';
 import styled from 'styled-components';
 
 const Arrow = styled.div`
-    background-color: antiquewhite;
+    background-color: transparent;
     border-radius: 100%;
-    border: 1px solid ${props => props.theme.fontColor};
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ const Arrow = styled.div`
     margin-top: 16px;
     a{
         text-decoration: none;
-        color:#002244
+        color: ${props => props.theme.fontColor};
     }
 `
 
@@ -21,7 +21,7 @@ export default function TopButton() {
 
     return(
        <Arrow>
-           <a href='#menu'><AiOutlineArrowUp/></a>
+           <a href='#menu'><AiOutlineArrowUp size={28}/></a>
        </Arrow>
     )
 }

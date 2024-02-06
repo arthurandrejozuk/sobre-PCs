@@ -104,47 +104,50 @@ const StyledCompu = styled.div`
 `
 
 
-export default function Computador(){
+export default function Computador({desativa = true}:{desativa?:boolean}){
 
-    return(
-        <>
-            <Hstyled>
-                <h1>Computador, peça por peça</h1>
-            </Hstyled>
-            
-            {computador.map(compu => {
-                return(
 
-                    <StyledCompu>    
-                        <ul>
-                            <li className='processador'>
-                                <a>Processador</a>
-                                <span className='span'>Ryzen 9 5900X</span>
-                            </li >
-                            <li  className='memoria'>
-                                <a>Memoria Ram</a>
-                                <span className='span'>hyperX DDR4 2666MHz</span>
-                            </li>
-                            <li  className='cooler'>
-                               <a>Cooler</a> 
-                            </li>
-                            <li  className='ssd'>
-                                <a>SSD</a>
-                            </li>
-                            <li  className='placa_mae'>
-                                <a>Placa Mãe</a>
-                                <span className='span'>B550m-plus</span>
-                            </li>
-                            <li  className='placa_video'>
-                                <a>Placa de Video</a>
-                                <span className='span'>RTX 2060 SUPER</span>
-                            </li>
-                        </ul>
-                        <img width={750}  src={compu.imagem}  alt={compu.nome} />
-                    </StyledCompu>
-                )
-            })}
-        </>
-    )
+    if(desativa){
+        return(
+            <>
+                <Hstyled>
+                    <h1>Computador, peça por peça</h1>
+                </Hstyled>
+                
+                {computador.map(compu => {
+                    return(
+    
+                        <StyledCompu>    
+                            <ul>
+                                <li className='processador'>
+                                    <a>Processador</a>
+                                    <span className='span'>Ryzen 9 5900X</span>
+                                </li >
+                                <li  className='memoria'>
+                                    <a>Memoria Ram</a>
+                                    <span className='span'>hyperX DDR4 2666MHz</span>
+                                </li>
+                                <li  className='cooler'>
+                                   <a>Cooler</a> 
+                                </li>
+                                <li  className='ssd'>
+                                    <a>SSD</a>
+                                </li>
+                                <li  className='placa_mae'>
+                                    <a>Placa Mãe</a>
+                                    <span className='span'>B550m-plus</span>
+                                </li>
+                                <li  className='placa_video'>
+                                    <a>Placa de Video</a>
+                                    <span className='span'>RTX 2060 SUPER</span>
+                                </li>
+                            </ul>
+                            <img width={750}  src={compu.imagem}  alt={compu.nome} />
+                        </StyledCompu>
+                    )
+                })}
+            </>
+        )
+    }
 
 }

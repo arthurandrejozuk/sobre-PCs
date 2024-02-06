@@ -7,7 +7,7 @@ import VoltarButton from '../VoltarButton';
 const StyledDiv = styled.div`
     margin-right: 300px ;
     margin-left: 300px ;
-    
+    margin-top: 100px;
     
     h1{   
         color: ${props => props.theme.fontColor};
@@ -50,25 +50,23 @@ interface InformacaoProps {
    imagem: string
 }
 
-export default function Informacao({descricao, titulo, imagem}:InformacaoProps){
-    
-    return(
+export default function Informacao({
+    descricao,
+    titulo,
+    imagem,
+}: InformacaoProps) {
+    return (
         <>
             <StyledDiv>
                 <div>
                     <StyledImg src={imagem} alt={titulo} />
                 </div>
-                
-                    <h1>{titulo}</h1>
-                    <p>
-                    {descricao}
-                    </p>
-          
+                <h1>{titulo}</h1>
+                <p>{descricao}</p>
             </StyledDiv>
-            <StyledButton href='/'>
-                <VoltarButton/>
+            <StyledButton href="/">
+                <VoltarButton />
             </StyledButton>
         </>
-       
-    )
+    );
 }
