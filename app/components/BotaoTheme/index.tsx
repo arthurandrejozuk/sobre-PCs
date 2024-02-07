@@ -10,7 +10,7 @@ const BotaoStyled = styled.div`
     right: 80px;
     text-align: center;
     bottom: 120px;
-    color: antiquewhite;
+    color: #dbb98c;
     border-radius:100%;
     background-color: transparent;
     :hover{

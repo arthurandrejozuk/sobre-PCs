@@ -6,6 +6,7 @@ import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import {darkTheme, lightTheme} from '../themes/theme';
 import BotaoTheme from 'app/components/BotaoTheme';
+import Footer from 'app/components/Footer';
 
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -67,6 +68,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <GlobalStyles/> 
             <BotaoTheme onClick={() => {themeToggle()}}/>
             <Component {...pageProps} /> 
+            
        </>
       )}
     </ThemeProvider>

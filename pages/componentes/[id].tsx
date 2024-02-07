@@ -32,8 +32,10 @@ export async function getStaticProps(context) {
 }
 
 export default function componente(props){
+    
+
     return(
-        <Components 
+        <Components invisivel={true}
         titulo={props.name}
         children={
             <Informacao 
